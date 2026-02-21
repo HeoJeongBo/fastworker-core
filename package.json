@@ -1,6 +1,6 @@
 {
   "name": "@heojeongbo/fastworker-core",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Framework-agnostic core data structures and worker-side logic utilities for browser Web Workers.",
   "license": "MIT",
   "type": "module",
@@ -15,12 +15,19 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "sideEffects": false,
   "engines": {
     "node": ">=18"
   },
-  "workspaces": [".", "example/*"],
+  "workspaces": [
+    ".",
+    "example/*"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -42,7 +49,14 @@
     "release:dry": "release-it --dry-run",
     "prepublishOnly": "bun run test && bun run build"
   },
-  "keywords": ["web-worker", "ring-buffer", "timeseries", "vite", "nextjs", "frontend"],
+  "keywords": [
+    "web-worker",
+    "ring-buffer",
+    "timeseries",
+    "vite",
+    "nextjs",
+    "frontend"
+  ],
   "author": "heojeongbo <heojungbo@gmail.com> (https://github.com/HeoJeongBo)",
   "repository": {
     "type": "git",
