@@ -39,7 +39,7 @@
     "prepublishOnly": "bun run test && bun run build"
   },
   "keywords": ["web-worker", "ring-buffer", "timeseries", "vite", "nextjs", "frontend"],
-  "author": "heojeongbo",
+  "author": "heojeongbo <heojungbo@gmail.com> (https://github.com/HeoJeongBo)",
   "repository": {
     "type": "git",
     "url": "https://github.com/heojeongbo/fastworker-core.git"
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@release-it/conventional-changelog": "^10.0.5",
     "@rollup/plugin-typescript": "^12.1.2",
     "husky": "^9.1.7",
     "release-it": "^18.1.2",
