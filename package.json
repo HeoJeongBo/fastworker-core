@@ -36,6 +36,10 @@
     "example:vite:build": "bun --cwd example/vite run build",
     "husky:install": "husky",
     "release": "release-it",
+    "release:patch": "release-it patch",
+    "release:minor": "release-it minor",
+    "release:major": "release-it major",
+    "release:dry": "release-it --dry-run",
     "prepublishOnly": "bun run test && bun run build"
   },
   "keywords": ["web-worker", "ring-buffer", "timeseries", "vite", "nextjs", "frontend"],
