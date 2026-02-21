@@ -1,0 +1,19 @@
+{
+  "git": {
+    "commitMessage": "chore(release): v${version}",
+    "tagName": "v${version}",
+    "requireCleanWorkingDir": true,
+    "requireBranch": false,
+    "push": true
+  },
+  "npm": {
+    "publish": true,
+    "ignoreVersion": false
+  },
+  "github": {
+    "release": true
+  },
+  "hooks": {
+    "before:init": "bun run test && bun run build"
+  }
+}

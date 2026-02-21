@@ -1,0 +1,62 @@
+{
+  "name": "@heojeongbo/fastworker-core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic core data structures and worker-side logic utilities for browser Web Workers.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun@1.2.3",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [".", "example/*"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "check": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "format": "biome format . --write",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example:vite:dev": "bun --cwd example/vite run dev",
+    "example:vite:build": "bun --cwd example/vite run build",
+    "husky:install": "husky",
+    "release": "release-it",
+    "prepublishOnly": "bun run test && bun run build"
+  },
+  "keywords": ["web-worker", "ring-buffer", "timeseries", "vite", "nextjs", "frontend"],
+  "author": "heojeongbo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heojeongbo/fastworker-core.git"
+  },
+  "homepage": "https://github.com/heojeongbo/fastworker-core#readme",
+  "bugs": {
+    "url": "https://github.com/heojeongbo/fastworker-core/issues"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "husky": "^9.1.7",
+    "release-it": "^18.1.2",
+    "rollup": "^4.34.9",
+    "rollup-plugin-dts": "^6.1.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
